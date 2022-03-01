@@ -1,0 +1,186 @@
+/* =============== global css =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --simple-dark-border: rgba(34, 33, 33, 0.137);
+  --simple-dark-shadow: 0px 1px 7px 3px rgba(0, 0, 0, 0.05);
+  --simple-green-bg: #198754;
+  --simple-text-white: rgba(255, 255, 255, 0.822);
+  --simple-text-black: rgba(24, 24, 24, 0.685);
+  --simple-text-blue: rgba(8, 42, 231, 0.739);
+  --simple-fade-blue: rgba(101, 101, 161, 0.144);
+}
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  quotes: none;
+}
+/* ====================== some custom class =============== */
+.r-border-simple-dark {
+  border: 1px solid var(--simple-dark-border);
+}
+.r-simple-dark-shadow {
+  box-shadow: var(--simple-dark-shadow);
+}
+.r-overflow-x-scroll {
+  overflow-x: scroll;
+}
+.r-overflow-y-scroll {
+  overflow-y: scroll;
+}
+.r-mn-w-100 {
+  min-width: 100px !important;
+}
+.r-mn-w-250 {
+  min-width: 250px;
+}
+.r-mn-w-350 {
+  min-width: 350px;
+}
+.r-mn-w-400 {
+  min-width: 400px;
+}
+.r-mn-w-500 {
+  min-width: 500px;
+}
+.r-mn-w-600 {
+  min-width: 600px;
+}
+
+.r-mx-w-300 {
+  min-width: 300px;
+}
+.r-mx-w-400 {
+  min-width: 400px;
+}
+.r-mn-h-70 {
+  min-height: 70px;
+}
+.r-mx-h-200 {
+  max-height: 200px;
+}
+.r-mx-h-300 {
+  max-height: 300px;
+}
+.r-mx-h-500 {
+  max-height: 500px;
+}
+.r-mx-h-700 {
+  max-height: 700px;
+}
+.r-rounded-100 {
+  border-radius: 100%;
+}
+.r-quote {
+  quotes: '"' '"';
+}
+/* ==============================
+page intro section
+=============================*/
+.page-intro-section {
+  margin-top: 130px;
+}
+/* ============================== 
+filter section 
+========================= */
+.filter-section.sticky {
+  position: fixed;
+  top: -2000px;
+  left: 0;
+  width: 100%;
+  z-index: 111;
+  background: white;
+  transition: top 1s ease-in-out;
+  animation: filterSection 1s 1 alternate;
+}
+/* ==================== 
+all filter modal section
+ ==================== */
+.all-filter-modal-list li {
+  border-radius: 5px;
+  margin: 3px 0;
+  background: var(--simple-fade-blue);
+}
+.all-filter-modal-list li:hover {
+  color: var(--simple-text-white);
+  background-color: var(--simple-green-bg);
+}
+.all-filter-modal-list li.active {
+  color: var(--simple-text-white);
+  background-color: var(--simple-green-bg);
+}
+.allfilter-horizontal-scroll {
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none;
+}
+
+.allfilter-horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+/*
+/* ================
+page content section 
+=================== */
+.r-avatar-div {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+
+/* ============
+ page content pagination 
+============= */
+.page-link {
+  color: var(--simple-green-bg);
+}
+.page-link:hover {
+  color: var(--simple-text-blue);
+}
+.page-item.active .page-link {
+  background-color: var(--simple-green-bg);
+}
+
+/* ====================
+ discution section 
+=================== */
+.discussion-avatar {
+  height: 40px;
+  width: 40px;
+}
+
+/* ================= =========================================
+                        responsive css
+ ======================   ====================================*/
+@media (min-width: 576px) {
+  .all-filter-modal .modal-dialog {
+    max-width: 550px;
+  }
+  .r-overflow-x-scroll {
+    overflow-x: scroll;
+  }
+}
+
+@media (min-width: 768px) {
+  .all-filter-modal .modal-dialog {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .all-filter-modal .modal-dialog {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .r-overflow-x-xl-none {
+    overflow-x: visible !important;
+  }
+}
+
+@media (min-width: 1400px) {
+}
